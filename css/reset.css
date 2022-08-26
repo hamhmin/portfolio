@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+:root {
+    --main-color: #9C88FF;
+    --light: #fff;
+    --dark: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+html,
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.pg-pips {
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pg-pips ul {
+    width: 20px;
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.pg-pips ul li{
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.pg-pips ul li a{
+    display: block;
+    width: 4px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+}   
+.pg-pips ul li:hover a{
+    width: 4px;
+    height:24px;
+    background: var(--main-color);
+    transition: 0.5s;
+}
+.pg-pips ul li a.active, .pg-pips ul li:hover a.active {
+    width: 4px;
+    position: relative;
+    animation-name: pips-active;
+    animation-duration: 0.2s;
+    animation-fill-mode:forwards ;
+    background: var(--main-color);
+}
+@keyframes pips-active {
+    0%{
+        height: 8px;
+    }
+    100%{
+        height: 24px;
+    }
+}
+/* .pg-pips ul li a.active::after, .pg-pips ul li:hover a.active::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--main-color);
+    width: 4px;
+    height: 6px;
+    border-radius: 50px;
+    transition: 0.5s;
+} */
