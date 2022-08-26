@@ -1,0 +1,30 @@
+.main-text{
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation:  dash 7s forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes dash {
+  100% { stroke-dashoffset: 0; }
+}
+
+
+.splash{
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to left, rgb(255, 255, 255) -100%, var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splash p{
+    display: none;
+    font-size: 30px;
+    font-weight: 100;
+    color: var(--light);
+}
