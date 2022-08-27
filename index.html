@@ -7,18 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        #title{
+            position: relative;
+        }
+        .color-box{
+            z-index: 100000;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 20px;
+            left: 20px;
+        }
+        .color-box div{
+            width: 20px;
+            height: 20px;
+        }
+        .color-box h6{
+            position: absolute;
+            top: 32px;
+            width: 100px;
+            line-height: 32px;
+            height: 32px;
+            font-size: 14px;
+            font-weight: 400;
+            outline: 2px solid #fff;
+            word-wrap: nowrap;
+            color: #fff;
+        }
+        .change-red{
+            background: #ff7979;
+        }
+        .change-blue{
+            background: #74b9ff;
+        }
+        .change-purple{
+            background: #9C88FF;
+        }
+        .change-green{
+            background: #1abc9c;
+        }
+        .change-dark{
+            background: #333;
+        }
+    </style>
 </head>
 
 <body>
     <!-- splash -->
-    <!-- <div class="splash">
-        <p>안녕하세요.</p>
-    </div> -->
+    <div class="splash">
+        <p>안녕하세요.<br>
+            color</p>
+    </div>
     <div id="container">
         <div data-anchor="Page 1">
 
             <div id="title" class="container">
+                <div class="color-box">
+                    <h6>color pick</h6>
+                    <div class="change-red">
 
+                    </div>
+                    <div class="change-blue">
+                        
+                    </div>
+                    <div class="change-purple">
+                        
+                    </div>
+                    <div class="change-green">
+                        
+                    </div>
+                    <div class="change-dark">
+                        
+                    </div>
+                </div>
                 <!-- <h1>함형민의<br>PORTFORIO</h1> -->
                 <div class="svg-box">
                     <svg width="191" height="100" viewBox="0 0 191 100" fill="none" xmlns="http://www.w3.org/2000/svg">

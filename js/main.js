@@ -1,11 +1,14 @@
 $(function(){
     // splash
-    // setTimeout(function(){
-    //     $('.splash p').fadeIn();
-    // },1000);
-    // setTimeout(function(){
-    //     $('.splash').fadeOut();
-    // },3000);
+    // $('.splash').hide();
+    setTimeout(function(){
+        $('.splash p').fadeIn();
+    },1000);
+    setTimeout(function(){
+        $('.splash').fadeOut();
+    },3000);
+
+    // main-p
 
     //project nav
     $('#all').click(function(){
@@ -83,4 +86,36 @@ $(function(){
         //     console.log(h, UpDown);
         // },500);
 
+        //color pick 등장
+        $('.color-box').hide();
+        setTimeout(function(){
+            $('.color-box').fadeIn();
+        },500);
+        // :root 변경
+        $('.change-red').click(function(){
+            $(':root').css('--main-color','#ff7979');
+            $(':root').css('--dark','#333');
+            $(':root').css('--light','#fff');
+        });
+        $('.change-blue').click(function(){
+            $(':root').css('--main-color','#74b9ff');
+            $(':root').css('--dark','#333');
+            $(':root').css('--light','#fff');
+        });
+        $('.change-purple').click(function(){
+            $(':root').css('--main-color','#9C88FF');
+            $(':root').css('--dark','#333');
+            $(':root').css('--light','#fff');
+        });
+        $('.change-green').click(function(){
+            $(':root').css('--main-color','#1abc9c');
+            $(':root').css('--dark','#333');
+            $(':root').css('--light','#fff');
+        });
+        
+        $('.change-dark').click(function(){
+            $(':root').css('--main-color','#333');
+            $(':root').css('--dark','#fff');
+            $(':root').css('--light','#333');
+        });
 });

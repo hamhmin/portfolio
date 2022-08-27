@@ -43,7 +43,7 @@
     transform: translateX(-50%);
 } */
 #title p{
-    border: 1px solid var(--light);
+    border: 1px solid #fff;
     font-weight: 300;
     width: 205px;
     height: 45px;
@@ -53,11 +53,21 @@
     justify-content: space-around;
     transition: 0.5s;
     margin-bottom:30px;
+    animation: title-btn 3s forwards;
+    opacity: 0;
+    animation-delay: 4s;
+    color: #fff;
 }
+@keyframes title-btn {
+    100%{
+        opacity: 1;
+    }
+}
+
 #title p:hover{
     background: rgba(255,255,255,0.9);
     border: 0;
-    box-shadow: 0 0 1px #fff;
+    box-shadow: 0 0 1px var(--light);
     color: var(--main-color);
 }
 #title p a{
@@ -188,7 +198,7 @@ margin-top: 12px;
     background-image: linear-gradient(
       45deg,
       var(--main-color) 50%,
-      #fff 50%
+      var(--light) 50%
     );
     
     /* Set the background size and repeat properties. */
@@ -209,19 +219,22 @@ margin-top: 12px;
   
   #contect .email:hover,   #contect .email:hover span{
       animation: button-animation-rev 0.65s ease-out forwards;
+      
   }
   
   #contect .email:hover {
     box-shadow: 3px 2px 10px 1px rgba(255,255,255,0.2);
 
   }
-  
+  #contect .email:hover span.gradient-text{
+  }
   @keyframes button-animation {
     0% {
       background-position: top right;
     }
     100% {
       background-position: top left;
+
     }
   }
   
@@ -231,6 +244,7 @@ margin-top: 12px;
     }
     100% {
       background-position: top right;
+      
     }
   }
   
@@ -257,6 +271,7 @@ margin-top: 12px;
     font-size: 5vw;
     cursor: pointer;
     font-weight: 700;
+    
   }
 
   /* slide box */

@@ -4,6 +4,7 @@
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     animation:  dash 8s forwards;
+    animation-delay: 4s;
     fill: transparent;
 }
 
@@ -41,4 +42,5 @@
     font-size: 30px;
     font-weight: 100;
     color: var(--light);
+    text-align: center;
 }
