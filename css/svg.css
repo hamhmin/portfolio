@@ -50,7 +50,7 @@
     z-index: 100000;
     width: 100px;
     height: 20px;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     top: 20px;

@@ -97,8 +97,6 @@ margin-top: 12px;
 
 
 
-#project{
-}
 
 
 #contect{
@@ -224,6 +222,7 @@ margin-top: 12px;
     justify-content: center;
     align-items: center;
     flex-direction:column ;
+    color: #333;
   }
   #project #project-guide{
     width: 100vw;
@@ -330,6 +329,7 @@ margin-top: 12px;
 #about{
     border-bottom: 2px dashed var(--main-color);
     background: #f0f3f5;
+    color: #333;
 }
 #about h4{
     width: 100%;
