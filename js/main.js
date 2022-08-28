@@ -9,7 +9,7 @@ $(function(){
     },3000);
 
     // main-p 랜덤번호 텍스트 삽입
-    let hi = Math.floor(Math.random()*2);
+    let hi = Math.floor(Math.random()*3);
     console.log(hi);
     if(hi == 0){
         $('.splash p').html('Welcome!');
