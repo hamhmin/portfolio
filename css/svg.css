@@ -38,9 +38,53 @@
     align-items: center;
 }
 .splash p{
-    display: none;
+    display:none;
     font-size: 30px;
     font-weight: 100;
     color: var(--light);
     text-align: center;
+}
+
+
+.color-box{
+    z-index: 100000;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+.color-box div{
+    width: 20px;
+    height: 20px;
+}
+.color-box h6{
+    position: absolute;
+    top: 32px;
+    width: 100px;
+    line-height: 32px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: 2px solid #fff;
+    word-wrap: nowrap;
+    color: #fff;
+}
+.change-red{
+    background: #ff7979;
+}
+.change-blue{
+    background: #74b9ff;
+}
+.change-purple{
+    background: #9C88FF;
+}
+.change-green{
+    background: #1abc9c;
+}
+.change-dark{
+    background: #333;
 }

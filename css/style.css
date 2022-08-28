@@ -21,6 +21,7 @@
     align-items: center;
     color: var(--light);
     text-align: center;
+    position: relative;
 }
 #title h1{
     font-weight: 300;
@@ -109,11 +110,13 @@ margin-top: 12px;
     justify-content: space-between;
     color: var(--light);
     font-weight: 300;
+    color: #fff;
 }
-#contect h1{
-    font-size: 6vw;
-    cursor: pointer;
-    font-weight: 900;
+#contect h4{
+    font-size: 24px;
+    height: 100px;
+    line-height: 150px;
+    color: #fff;
 }
 #contect article{
     text-align: center;
@@ -134,7 +137,7 @@ margin-top: 12px;
 }
 #contect .sns .bi{
     font-size: 28px;
-    color: var(--light);
+    color: #fff;
 }
 #contect .sns img{
     width: 28px;
@@ -142,78 +145,22 @@ margin-top: 12px;
 #contect .year{
     margin-top: 20px;
 }
-
-/* .gradient-text {
-    background-color: #fff;
-     background-image: linear-gradient(
-          45deg,
-          #81ecec 16.666%, 
-          #ffeaa7 16.666%, 
-           #ffeaa7 33.333%, 
-           #fab1a0 33.333%, 
-           #fab1a0 50%, 
-           #ff7675 50%, 
-           #ff7675 66.666%, 
-           #0984e3 66.666%, 
-           #0984e3 83.333%, 
-           #55efc4 83.333%);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-      animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-  }
-  .gradient-text:hover{
-      animation: rainbow-text-simple-animation 0.5s ease-in forwards;
-  }
-  @keyframes rainbow-text-simple-animation-rev {
-      0% {
-          background-size: 650%;
-      }
-      40% {
-          background-size: 650%;
-      }
-      100% {
-          background-size: 100%;
-      }
-  }
-  @keyframes rainbow-text-simple-animation {
-      0% {
-          background-size: 100%;
-      }
-      80% {
-          background-size: 650%;
-      }
-      100% {
-          background-size: 650%;
-      }
-  } */
-
-
   .gradient-text {
-    /* Fallback: Set a background color. */
     background-color: var(--main-color);
-    
-    /* Create the gradient. */
     background-image: linear-gradient(
       45deg,
       var(--main-color) 50%,
-      var(--light) 50%
+      /* var light 하게되면 hover시 color black
+        #fff 고정 */
+      #fff 50%
     );
-    
-    /* Set the background size and repeat properties. */
     background-size: 270%;
     background-repeat: repeat;
     background-position: top right;
-  
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-  
-    
     animation: button-animation 0.65s 0.15s ease-out forwards;
   }
   
@@ -271,7 +218,6 @@ margin-top: 12px;
     font-size: 5vw;
     cursor: pointer;
     font-weight: 700;
-    
   }
 
   /* slide box */
@@ -282,7 +228,6 @@ margin-top: 12px;
     flex-direction:column ;
   }
   #project #project-guide{
-    outline: pink;
     width: 100vw;
     max-width: 1440px;
     height: 100vh;
@@ -291,6 +236,8 @@ margin-top: 12px;
     align-items: center;
   }
   #project h4{
+    color: var(--main-color);
+    font-size: 24px;
     width: 100vw;
     height: 100px;
     text-align: center;
@@ -298,7 +245,6 @@ margin-top: 12px;
     /* 제목 상하 위치 */
   }
   .project-nav{
-    outline: 2px solid red;
     width: 27%;
     height: 100%;
   }
@@ -309,7 +255,6 @@ margin-top: 12px;
     align-items: left;
     margin-left: 6vw;
     height: 100%;
-    outline: 2px solid pink;
     
 }
 .project-nav ul li{
@@ -317,11 +262,15 @@ margin-top: 12px;
     font-weight: 400;
     transition: 0.5s;
 
+    cursor: pointer;
+
 }
 .project-nav ul li:hover,
 .project-nav ul li.on
 {
     color: var(--main-color);
+    margin-left: 10px;
+    font-weight: 700;
 }
 
 
@@ -350,6 +299,7 @@ margin-top: 12px;
   .slide-box .slide-btn .bi{
     font-size: 32px;
     color: var(--main-color);
+    cursor: pointer;
 }
 .slide-box .slide-btn .up-btn{
     position: absolute;
