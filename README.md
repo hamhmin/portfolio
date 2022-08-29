@@ -1,6 +1,11 @@
 # portfolio
 0826~work
+# 웹사이트링크
 https://hamhmin.github.io/portfolio/
+
+# 깃허브링크
+https://github.com/hamhmin/portfolio
+
 
 # 웹 포트폴리오 사이트
 
