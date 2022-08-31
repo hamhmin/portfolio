@@ -22,7 +22,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+button{
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
 
 html,
 body {
@@ -96,7 +100,7 @@ body {
 
 .pips-text{
     position: fixed;
-    z-index: 10000;
+    z-index: 1500;
     top: 50%;
     right: 30px;
     text-align: right;
