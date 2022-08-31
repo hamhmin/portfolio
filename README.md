@@ -34,4 +34,4 @@ https://github.com/hamhmin/portfolio
 - figma
 - 
 # 대표사진
-
+![screenshot](https://user-images.githubusercontent.com/49775311/187648437-a9674a7f-b4df-4230-8c7f-7a953a888c05.JPG)
