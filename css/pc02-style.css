@@ -363,7 +363,7 @@ html {
 .slide-box {
     width: 76%;
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
     position: relative;
         
 }
