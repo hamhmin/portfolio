@@ -293,5 +293,5 @@ console.log('ScrollTop',ScrollTop);
         $('.modal').hide();
     });
 
-    
+        $('.slide-box').off('touchmove');
 });
