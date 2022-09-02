@@ -100,7 +100,7 @@ body {
 
 .pips-text{
     position: fixed;
-    z-index: 20;
+    z-index: 5;
     top: 50%;
     right: 30px;
     text-align: right;

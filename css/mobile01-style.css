@@ -1,5 +1,7 @@
 
 
+
+
 #about .info article h5 {
     width: 20%;
     min-width: 90px;
@@ -69,4 +71,76 @@
     margin-left: 5px;
     font-weight: 500;
     color: var(--main-color);
+}
+
+
+
+.modal{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+}
+.modal .modal-btn-box{
+    position: sticky;
+    width: max-content;
+    top: 30px;
+    left:90%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-right: 20px;
+    gap: 20px;
+}
+.modal .bi-github{
+    font-size: 28px;
+    color: var(--main-color);
+    transition: 0.6s;
+}
+.modal .bi-github:hover{
+    opacity: 0.5;
+    font-size: 24px;
+}
+.modal .close-btn{
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 0.6s;
+}
+.modal .close-btn:hover {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.modal .close-btn .bi-x{
+    font-size: 20px;
+color: var(--main-color);
+}
+.modal .modal-img-box{
+    width: 80vw;
+    max-width: 1000px;
+    height: 100vh;
+    overflow: scroll;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+.modal .modal-img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
 }

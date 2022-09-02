@@ -275,5 +275,23 @@ console.log('ScrollTop',ScrollTop);
         }
     }
 
+    $('.c01 .view-more').click(function(){
+        $('.modal img').attr('src','./images/project-img01.jpg');
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/audio-technica')
+        $('.modal').show();
+    });
+    $('.close-btn').click(function(){
+        $('.modal').hide();
+    });
 
+    $('.c02 .view-more').click(function(){
+        $('.modal img').attr('src','./images/project-img02.jpg');
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/drawfit-mobile-web');
+        $('.modal').show();
+    });
+    $('.close-btn').click(function(){
+        $('.modal').hide();
+    });
+
+    
 });
