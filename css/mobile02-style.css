@@ -424,7 +424,7 @@ padding-top: 20px;
 color: var(--main-color);
 }
 .modal .modal-img-box{
-    width: 80vw;
+    width: 100vw;
     max-width: 1000px;
     height: 100vh;
     overflow: scroll;
