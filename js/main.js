@@ -23,9 +23,10 @@ $(function () {
 
 
     //slide btn show hide
-
-    let v = window.innerHeight - 100;
-    let scrollValue = window.innerHeight - 100;
+    let W = document.querySelector('#offset-top').offsetTop;
+    console.log(222,W);
+    let v = document.querySelector('#offset-top').offsetTop;
+    let scrollValue = document.querySelector('#offset-top').offsetTop;
     let UpDown = 0;
     // 사이트 실행후 vh 를 줄이고 작업물 슬라이드를 했을때 덜내려오거나 다음 혹은 이전의 작업물이 삐져나오는 현상은 
     // scrollValue, v 의 값이 사이트 첫실행시에 맞춰져있기 때문.
@@ -172,8 +173,8 @@ $(function () {
         else if( ScrollTop <= 0 && m){
             $('#mo-web .mo-sub li.dr').addClass('active');
         }
-        // vh 조절시 작동 안됐던 부분 수정 >= v =>>> > v -1
-        else if ( ScrollTop > v -1 && m){
+        // vh 조절시 작동 안됐던 부분 수정 >= v =>>> > v -10
+        else if ( ScrollTop > v -10 && m){
             $('#mo-web .mo-sub li.au').addClass('active');
         }
         // slide-box 이동시간 700ms가 지난후의 scrolltop 값 추출 => 701ms설정
@@ -261,7 +262,7 @@ console.log('ScrollTop',ScrollTop);
         var g = document.createElement("div");
         g.className = "startEffect";
         g.style.top = randomY + "px"; g.style.left = randomX + "px";
-        document.querySelector('#page-1').appendChild(g); 
+        document.querySelector('#title').appendChild(g); 
         g.addEventListener('animationend', function () { 
             g.parentElement.removeChild(g); 
         }.bind(this));
@@ -273,7 +274,6 @@ console.log('ScrollTop',ScrollTop);
                 },500);
         }
     }
-    
 
 
 });

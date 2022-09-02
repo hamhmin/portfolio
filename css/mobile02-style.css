@@ -1,4 +1,23 @@
+#title,
+#contact {
+    background-image: linear-gradient(to left, rgb(255, 255, 255) -100%, var(--main-color));
+}
+.container{
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+}
 
+
+.title-a{
+    display: none;
+}
+.title-a-mo{
+    display: block;
+}
+.pg-pips-mo{
+    display: block;
+}
 /* #about */
 #about {
     border-bottom: 2px dashed var(--main-color);
@@ -8,29 +27,32 @@
 
 #about h4 {
     width: 100%;
-    height: 100px;
-    line-height: 100px;
+    height: 60px;
+    line-height: 60px;
     color: var(--main-color);
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
 }
 
 #about #about-guide {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 #about .profile {
     width: 100%;
-    height: calc(50vh - 50px);
+    height: calc(50vh - 30px);
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
+    gap: 10px;
     align-items: center;
     text-align: center;
 }
 .my-img-box{    
-    width: 100vw;
+    width: 40vw;
     height: 30vh;
 }
 #about .profile img {
@@ -41,6 +63,7 @@
 
 
 #about .profile p {
+    font-size: 14px;
 }
 
 #about .profile .name {
@@ -52,8 +75,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(50vh - 50px);
-    padding: 40px 20px;
+    height: calc(50vh - 30px);
+    padding:0 20px 20px 20px;
 }
 
 #about .info article {
@@ -115,11 +138,11 @@
 
 #project h4 {
     color: var(--main-color);
-    font-size: 24px;
+    font-size: 20px;
     width: 100vw;
-    height: 100px;
+    height: 60px;
     text-align: center;
-    line-height: 100px;
+    line-height: 60px;
     /* 제목 상하 위치 */
 }
 
@@ -137,8 +160,9 @@
     gap: 0;
     width: 100vw;
     height:100%;
-padding-top: 20%;
+padding-top: 20px;
 }
+
 .project-nav ul li {
     font-size: 18px;
     font-weight: 500;
@@ -152,8 +176,8 @@ padding-top: 20%;
 .project-nav ul li:hover,
 .project-nav ul li.on {
     color: var(--main-color);
-    margin-left: 5px;
-    font-weight: 700;
+    margin-left: 0px;
+    font-weight: 500;
 }
 /* 2depth */
 .project-nav ul li ul{
@@ -170,17 +194,6 @@ padding-top: 20%;
     margin-left: 5px;
     font-weight: 500;
     color: var(--main-color);
-}
-.project-nav .re-sub{
-}
-.project-nav .re-sub li{
-
-}
-.project-nav .mo-sub{
-    
-}
-.project-nav .mo-sub li{
-    
 }
 
 
@@ -239,14 +252,14 @@ padding-top: 20%;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(var(--main-color) -150% , transparent 70%);
+    background-image: radial-gradient(var(--main-color) -100% , transparent 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .cont-section01 article{
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,7 +299,7 @@ padding-top: 20%;
 .cont-img-box{
     position: relative;
     width: 100%;
-    height: 30vw;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,4 +309,59 @@ padding-top: 20%;
     font-weight: 500;
     font-size: 18px;
     padding-top: 6px;
+}
+
+
+
+
+.clickEffect{
+    position: fixed;
+    /* border: 1px solid var(--main-color); */
+    background: var(--main-color);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition: 1s;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.3;
+    animation: clickEffect 3s backwards;
+}   
+@keyframes clickEffect {
+    100%{
+        
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        background: var(--light);
+        /* border: 1px solid var(--main-color); */
+    }
+}
+
+.startEffect{
+    position: absolute;
+    /* border: 1px solid var(--main-color); */
+    background: var(--main-color);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition: 1s;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.3;
+    animation: clickEffect 3s backwards;
+}   
+@keyframes clickEffect {
+    100%{
+        
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        background: var(--light);
+        /* border: 1px solid var(--main-color); */
+    }
+}
+
+.pips-text{
+    display: none;
 }

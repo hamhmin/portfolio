@@ -8,6 +8,9 @@
     margin: 0 auto;
     overflow: hidden;
 }
+#title.container{
+    max-width: none;
+}
 #page-1{
     position: relative;
     overflow: hidden;
@@ -26,7 +29,15 @@ html {
 #page-3 {
     background: #fff;
 }
-
+.title-a{
+    display: block;
+}
+.title-a-mo{
+    display: none;
+}
+.pg-pips-mo{
+    display: none;
+}
 #title {
     display: flex;
     flex-direction: column;
