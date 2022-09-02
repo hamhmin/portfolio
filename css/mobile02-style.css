@@ -1,0 +1,299 @@
+
+/* #about */
+#about {
+    border-bottom: 2px dashed var(--main-color);
+    background: #fafafa;
+    color: #333;
+}
+
+#about h4 {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: var(--main-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+#about #about-guide {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .profile {
+    width: 100%;
+    height: calc(50vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.my-img-box{    
+    width: 100vw;
+    height: 30vh;
+}
+#about .profile img {
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+}
+
+
+#about .profile p {
+}
+
+#about .profile .name {
+    font-weight: 500;
+}
+
+#about .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(50vh - 50px);
+    padding: 40px 20px;
+}
+
+#about .info article {
+    display: flex;
+    width: 50%;
+}
+#about .info article h5 {
+    width: 20%;
+    min-width: 90px;
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+#about .info article p {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+#about .info .skills{
+    width: 100%;
+}
+#about .info .skills ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .info .skills ul li{
+    width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+}
+
+#project #project-guide {
+    width: 100vw;
+    max-width: 480px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#project h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    /* 제목 상하 위치 */
+}
+
+.project-nav {
+    width: 100vw;
+    height: 40%;
+    position: relative;
+    z-index: 5;
+}
+
+.project-nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+    width: 100vw;
+    height:100%;
+padding-top: 20%;
+}
+.project-nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.project-nav ul li span{
+    display: block;
+}
+
+.project-nav ul li:hover,
+.project-nav ul li.on {
+    color: var(--main-color);
+    margin-left: 5px;
+    font-weight: 700;
+}
+/* 2depth */
+.project-nav ul li ul{
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+    color: #333;
+}
+.project-nav ul li ul li{
+    font-size: 14px;
+    padding: 0.5vw 0;
+}
+.project-nav ul li ul li.active,
+.project-nav ul li ul li:hover{
+    margin-left: 5px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.project-nav .re-sub{
+}
+.project-nav .re-sub li{
+
+}
+.project-nav .mo-sub{
+    
+}
+.project-nav .mo-sub li{
+    
+}
+
+
+
+
+
+
+.slide-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.slide-box .slide-btn {
+    background: none;
+    border: 0;
+    position: sticky;
+    float: left;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 12vw);
+    height: 32px;
+    z-index: 7;
+    margin: 0 6vw;
+}
+
+.slide-box .slide-btn .bi {
+    font-size: 32px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.slide-box .slide-btn .up-btn {
+    transform: rotate(-90deg);
+}
+
+.slide-box .slide-btn .down-btn {
+    transform: rotate(-90deg);
+}
+
+.slide-box .slide-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide-text-box{
+    display: none;
+}
+
+.cont-section01{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--main-color) -150% , transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cont-section01 article{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    overflow: hidden;
+}
+#project{
+    background: #fafafa;
+}
+
+.cont-section01 article .cont-btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    position: relative;
+    z-index: 8;
+}
+.cont-section01 article .cont-btn-box button{
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+.cont-section01 article img{
+    object-fit: contain;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}
+.cont-img-box img:hover{
+    opacity: 0.7;
+    transition: 0.6s;
+}
+
+.cont-img-box{
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 50px 110px -100px #000000;
+}
+.cont-section01 article h1{
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 6px;
+}

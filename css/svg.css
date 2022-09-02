@@ -29,7 +29,7 @@
 
 .splash{
     position: fixed;
-    z-index: 10000;
+    z-index: 9;
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to left, rgb(255, 255, 255) -100%, var(--main-color));
@@ -47,7 +47,7 @@
 
 
 .color-box{
-    z-index: 100000;
+    z-index: 10;
     width: 100px;
     height: 20px;
     position: fixed;
@@ -91,6 +91,30 @@
 
 .clickEffect{
     position: fixed;
+    /* border: 1px solid var(--main-color); */
+    background: var(--main-color);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition: 1s;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.3;
+    animation: clickEffect 3s backwards;
+}   
+@keyframes clickEffect {
+    100%{
+        
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+        background: var(--light);
+        /* border: 1px solid var(--main-color); */
+    }
+}
+
+.startEffect{
+    position: absolute;
     /* border: 1px solid var(--main-color); */
     background: var(--main-color);
     border-radius: 50%;

@@ -20,7 +20,11 @@
         <!-- 아이콘 등록 -->
         <link rel="shortcut icon" href="fabicon.png">
         <title>portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+        <!-- pc01 02 , mobile.css -->
+        <link rel="stylesheet" href="css/pc01-style.css" media="screen and (min-width : 900px)">
+        <link rel="stylesheet" href="css/pc02-style.css" media="screen and (max-width : 899px)">
+        <link rel="stylesheet" href="css/mobile01-style.css" media="screen and (max-width : 700px)">
+        <link rel="stylesheet" href="css/mobile02-style.css" media="screen and (max-width : 500px)">
 </head>
 
 <body>
@@ -64,7 +68,7 @@
 
 
 
-                <a href="#page-2"><p><span>View more</span><i class="bi bi-arrow-right"></i></p></a>
+                <a class="title-a" href="#page-2"><p><span>View more</span><i class="bi bi-arrow-right"></i></p></a>
             </div>
         </div>
         <div data-anchor="Page 2">
@@ -72,7 +76,9 @@
                 <h4>About</h4>
                 <section id="about-guide">
                     <div class="profile">
+                        <div class="my-img-box">
                         <img src="./images/my.jpg" alt="프로필">
+                    </div>
                         <p class="name">함형민<br>HAM HYUNGMIN</p>
                         <P>경험하고 상상할 수 있는 모든 것을 <br>실현시키고 싶습니다.</P>
                     </div>
@@ -82,7 +88,7 @@
                             <div class="edu-text">
                             <p>2년제 졸업 (유한대학교 시각디자인학과)<br>
                                 (2018~2020)</p>
-                            <p>이젠컴퓨터-ux/ui웹퍼블리셔 과정<br>
+                            <p>이젠컴퓨터 ux/ui웹퍼블리셔 과정<br>
                                 (2022.04.17~2022.09.06)</p>
                             </div>
                         </article>
@@ -138,11 +144,11 @@
                             <i class="bi bi-arrow-down-circle down-btn"></i>
                         </button>
                         <div class="slide-content re-web">
-                            <div class="cont-section01">
+                            <div class="cont-section01 c01">
                                 <article>
-                                    <h1>에이티컴퍼니 PC 웹 제작</h1>
+                                    <h1>에이티컴퍼니 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup01.png" alt="">
+                                    <img src="./images/mockup01.png" alt="목업">
                                     <div class="slide-text-box">
                                         <p class="left-text"></p>
                                         <p class="right-text"></p>
@@ -150,17 +156,19 @@
                                 </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
-                                        <button class="view-site">웹사이트</button>
+                                        <a href="https://hamhmin.github.io/solo-work01/" target="_blank">
+                                            <button class="view-site">웹사이트</button>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
                         </div>
                         <div class="slide-content re-web">
-                            <div class="cont-section01">
+                            <div class="cont-section01 c02">
                                 <article>
                                     <h1>사람그리고치과 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup02.png" alt="">
+                                    <img src="./images/mockup02.png" alt="목업">
                                     <div class="slide-text-box">
                                         <p class="left-text"></p>
                                         <p class="right-text"></p>
@@ -168,7 +176,9 @@
                                 </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
-                                        <button class="view-site">웹사이트</button>
+                                        <a href="https://hamhmin.github.io/2team-0811/" target="_blank">
+                                            <button class="view-site">웹사이트</button>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -178,7 +188,7 @@
                                 <article>
                                     <h1>DRAW FIT 모바일 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup03.png" alt="">
+                                    <img src="./images/mockup03.png" alt="목업">
                                     <div class="slide-text-box">
                                         <p class="left-text"></p>
                                         <p class="right-text"></p>
@@ -186,7 +196,9 @@
                                 </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
-                                        <button class="view-site">웹사이트</button>
+                                        <a href="https://hamhmin.github.io/drawfit-mobile-web/" target="_blank">
+                                            <button class="view-site">웹사이트</button>
+                                        </a>
                                     </div>
                                 </article>
                             </div>
@@ -196,7 +208,7 @@
                                 <article>
                                     <h1>오디오테크니카 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup04.png" alt="">
+                                    <img src="./images/mockup04.png" alt="목업">
                                     <div class="slide-text-box">
                                         <p class="left-text"></p>
                                         <p class="right-text"></p>
@@ -204,7 +216,9 @@
                                 </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
-                                        <button class="view-site">웹사이트</button>
+                                        <a href="https://hamhmin.github.io/audio-technica-project/" target="_blank">
+                                            <button class="view-site">웹사이트</button>
+                                        </a>
                                     </div>
                                 </article>
                             </div>

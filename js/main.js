@@ -22,6 +22,15 @@ $(function () {
     }
 
 
+    //slide btn show hide
+
+    let v = window.innerHeight - 100;
+    let scrollValue = window.innerHeight - 100;
+    let UpDown = 0;
+    // 사이트 실행후 vh 를 줄이고 작업물 슬라이드를 했을때 덜내려오거나 다음 혹은 이전의 작업물이 삐져나오는 현상은 
+    // scrollValue, v 의 값이 사이트 첫실행시에 맞춰져있기 때문.
+
+
     //project nav
     // 상위 카테고리 선택시 해당 상위의 하위 add .active  // 타 상위, 하위 remove .active
     $('#all').click(function () {
@@ -33,11 +42,13 @@ $(function () {
         $('#re-web ul li, #mo-web ul li').removeClass('active');
         $('.slide-content').fadeOut(1);
         $('.re-web').fadeIn(600);
+        UpDown = 0;
         $('#re-web .re-sub li').eq(0).addClass('active');
     });
     $('#mo-web span, #mo-web .mo-sub li').click(function () {
         $('#re-web ul li, #mo-web ul li').removeClass('active');
         $('.slide-content').fadeOut(1);
+        UpDown = 0;
         $('.mo-web').fadeIn(600);
         $('#mo-web .mo-sub li').eq(0).addClass('active');
 
@@ -49,6 +60,8 @@ $(function () {
         $(this).addClass('on');
     });
 
+
+    
 
     // 하위 메뉴 클릭시 형제요소의 remove .active
     $('#re-web .re-sub li').eq(0).click(function(){
@@ -69,41 +82,10 @@ $(function () {
     });
 
 
-    //slide btn show hide
-
-    let v = window.innerHeight - 100;
-    let scrollValue = window.innerHeight - 100;
-    let UpDown = 0;
-
-    // 하위메뉴 클릭시 해당 요소 등장
-    $('#re-web ul .at').click(function(){
-        Updown = 0;
-        $('.slide-box').animate({ scrollTop: Updown }, 0);
-        console.log(scrollValue);
-    });
-    $('#re-web ul .de').click(function(){
-        $('.slide-box').animate({ scrollTop: scrollValue }, 0);
-        console.log(scrollValue);
-    });
-
-    $('#mo-web ul .dr').click(function(){
-        Updown = 0;
-        $('.slide-box').animate({ scrollTop: Updown }, 0);
-        console.log(scrollValue);
-    });
-    $('#mo-web ul .au').click(function(){
-        $('.slide-box').animate({ scrollTop: scrollValue }, 0);
-        console.log(scrollValue);
-    });
-
-
-
-
 
     $('.down-btn').click(function () {
         // div가 몇개인 카테고리를 가리기 위한 참 거짓 값 가져오기  
         var z = $('#re-web, #mo-web').hasClass('on');
-
         var x = $('#all').hasClass('on');
 
         // div가 2개일때, 마지막요소에선 실행되지않음.
@@ -133,6 +115,7 @@ $(function () {
     $('.up-btn').click(function () {
         if (UpDown > 0) { 
         UpDown -= scrollValue; 
+        console.log(UpDown);
         $('.slide-content img').stop().fadeOut(300);
         setTimeout(function(){
             $('.slide-box').stop().animate({ scrollTop: UpDown }, 0);
@@ -141,7 +124,65 @@ $(function () {
     }
 });
 
+    // 하위메뉴 클릭시 해당 요소 등장
+    $('#all').click(function(){
+        Updown = 0;
+        $('.slide-content img').stop().fadeOut(1);
+            $('.slide-box').stop().animate({ scrollTop: UpDown}, 0);
+            $('.slide-content img').fadeIn(300);
+    });
+    $('#re-web ul .at').click(function(){
+        $('.slide-box').animate({ scrollTop: 0 }, 0);
+    });
+    $('#re-web ul .de').click(function(){
+        UpDown = scrollValue;
+        $('.slide-box').animate({ scrollTop: UpDown }, 0);
+    });
 
+    $('#mo-web ul .dr').click(function(){
+        UpDown = 0;
+        $('.slide-box').animate({ scrollTop: UpDown }, 0);
+    });
+    $('#mo-web ul .au').click(function(){
+        UpDown = scrollValue;
+        $('.slide-box').animate({ scrollTop: UpDown }, 0);
+    });
+    $('#re-web span, #mo-web span').click(function(){
+        $('.slide-content img').stop().fadeOut(1);
+            $('.slide-box').stop().animate({ scrollTop: 0 }, 0);
+            $('.slide-content img').fadeIn(300);
+    });
+
+// 해당 작품이 나오면 그 작품과 이름이 같은 카테고리에 add active
+// 2depth 카테고리 active를 빼고 hover 효과만 넣으면 상황이 무마되긴함.
+    $('.slide-btn .bi').click(function(){
+        setTimeout(function(){
+        let r = $('#re-web').hasClass('on');
+        let m = $('#mo-web').hasClass('on');
+        console.log(m);
+        let ScrollTop = $('.slide-box').scrollTop();
+        $('#re-web .re-sub li').removeClass('active');
+        $('#mo-web .mo-sub li').removeClass('active');
+        if( ScrollTop <= 0 && r){
+            $('#re-web .re-sub li.at').addClass('active');
+        }
+       else if ( ScrollTop >= v && r){
+            $('#re-web .re-sub li.de').addClass('active');
+        }
+        else if( ScrollTop <= 0 && m){
+            $('#mo-web .mo-sub li.dr').addClass('active');
+        }
+        // vh 조절시 작동 안됐던 부분 수정 >= v =>>> > v -1
+        else if ( ScrollTop > v -1 && m){
+            $('#mo-web .mo-sub li.au').addClass('active');
+        }
+        // slide-box 이동시간 700ms가 지난후의 scrolltop 값 추출 => 701ms설정
+    },701);
+    });
+    setInterval(function(){
+    let ScrollTop = $('.slide-box').scrollTop();
+console.log('ScrollTop',ScrollTop);
+},1000);
 
 
     //color pick 등장
@@ -183,23 +224,6 @@ $(function () {
         $('#container').fadeIn(1000);
     });
 
-    // let 1 = 누르기 이전 --main-color 의 값
-    // let 2 = 누른 이후의 --main-color 의 값
-    // 현재 너무 확바뀌어서 멀미가 날정도
-    // ? 에서 ! 색변경 자연스러운 연출  
-    //             실패.
-    // $('.color-box div').click(function(){
-    //     var rootName1 = '#9C88FF';
-    //     var rootName2 = $(this).css("background-color");
-    //     console.log(rootName1,rootName2);
-    //     // 이곳에 색상을 바꿨을때 실행시킬 함수 넣어주기
-    //     $('.color-box-fade').css('background',`${rootName2})`);
-
-
-    //     // 다음 색상을 누르기 전에 먼저 누른 색상 변수
-    //     var rootName1 = rootName2;
-    //     console.log(rootName1,rootName2);
-    // });
 
 
 
@@ -216,15 +240,6 @@ $(function () {
 
 
 
-    // var Click = $('body');
-    // Click.click(function (event) {
-    //     x = event.pageX;
-    //     y = event.pageY;
-    //     console.log(x, y);
-    //     $('body').append(`<div class="click-motion"></div>`);
-    //     $(`.click-motion`).css({ 'top': `${y}px`, 'left': `${x}px` });
-    // });
-
     // 클릭시 생성되는 원, 그 원이 애니메이션으로 불투명도,스케일 조정, 애니메이션이 끝난후 코드 삭제
 
     function clickEffect(e) {
@@ -237,5 +252,28 @@ $(function () {
         }.bind(this));
     }
     document.addEventListener('click', clickEffect);
+    //접속시 랜덤 폭죽 생성
+    function startEffect(e) {
+        var ww =window.innerWidth;
+        var wh = window.innerHeight
+        var randomX = Math.floor(Math.random() * ww);
+        var randomY = Math.floor(Math.random() * wh);
+        var g = document.createElement("div");
+        g.className = "startEffect";
+        g.style.top = randomY + "px"; g.style.left = randomX + "px";
+        document.querySelector('#page-1').appendChild(g); 
+        g.addEventListener('animationend', function () { 
+            g.parentElement.removeChild(g); 
+        }.bind(this));
+    }
+    for(let i = 0; i < 1 ; i++){
+        if(i <= 1){
+                setInterval(function(){
+                    startEffect();
+                },500);
+        }
+    }
+    
+
 
 });

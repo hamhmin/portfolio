@@ -1,0 +1,533 @@
+@import url('reset.css');
+@import url('svg.css');
+
+.container {
+    max-width: 1440px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#page-1{
+    position: relative;
+    overflow: hidden;
+}
+#page-1,
+#page-4 {
+    background-image: linear-gradient(to left, rgb(255, 255, 255) -100%, var(--main-color));
+}
+
+/* color-box 애니메이션 색상 */
+html {
+    background: #34495e;
+}
+
+#page-2,
+#page-3 {
+    background: #fff;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    text-align: center;
+    position: relative;
+}
+
+#title h1 {
+    font-weight: 300;
+    font-size: 36px;
+    padding: 30px;
+    position: relative;
+}
+
+#title svg {
+    margin-bottom: 30px;
+}
+
+#title p {
+    border: 1px solid #fff;
+    font-weight: 300;
+    width: 205px;
+    height: 45px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    animation: title-btn 3s forwards;
+    opacity: 0;
+    animation-delay: 4s;
+    color: #fff;
+}
+.title-a{
+    position: relative;
+    z-index: 7;
+}
+@keyframes title-btn {
+    100% {
+        opacity: 1;
+    }
+}
+
+#title p:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border: 0;
+    box-shadow: 0 0 1px var(--light);
+    color: var(--main-color);
+}
+
+#title p a {
+    transition: 0.6s;
+}
+
+#title p a .bi {
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+#title p:hover .bi {
+    transform: rotate(90deg) translateX(-2px);
+    transition: 0.6s;
+    animation: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes arrow {
+    0% {
+        margin: 0;
+    }
+
+    100% {
+        margin-top: 12px;
+        color: var(--main-color);
+    }
+}
+
+
+
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light);
+    font-weight: 300;
+    color: #fff;
+}
+
+#contact h4 {
+    font-size: 24px;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+}
+
+#contact article {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact .tel p {
+    margin-bottom: 10px;
+}
+
+#contact .social {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .sns {
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+}
+
+#contact .sns .bi {
+    font-size: 28px;
+    color: #fff;
+}
+
+#contact .sns a {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+#contact .sns a:hover {
+    transform: scale(0.8);
+}
+
+#contact .sns img {
+    width: 28px;
+}
+
+#contact .year {
+    margin-top: 20px;
+}
+
+.gradient-text {
+    background-color: var(--main-color);
+    background-image: linear-gradient(45deg,
+            var(--main-color) 50%,
+            /* var light 하게되면 hover시 color black
+        #fff 고정 */
+            #fff 50%);
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    animation: button-animation 0.65s 0.15s ease-out forwards;
+}
+
+#contact .email:hover,
+#contact .email:hover span {
+    animation: button-animation-rev 0.65s ease-out forwards;
+
+}
+
+#contact .email:hover {
+    box-shadow: 3px 2px 10px 1px rgba(255, 255, 255, 0.2);
+
+}
+
+#contact .email:hover span.gradient-text {
+
+}
+
+@keyframes button-animation {
+    0% {
+        background-position: top right;
+    }
+
+    100% {
+        background-position: top left;
+
+    }
+}
+
+@keyframes button-animation-rev {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+
+    }
+}
+
+#contact .email {
+    background-image: linear-gradient(45deg, rgb(255, 255, 255) 50%, var(--main-color));
+    background-size: 500%;
+    background-repeat: repeat;
+    background-position: top right;
+    animation: button-animation 0.65s 0.15s ease-out forwards;
+    border-radius: 300px;
+    box-shadow: 7px 4px 20px 1px rgba(0, 0, 0, 0.15);
+    padding: 24px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+#contact .email span {
+    text-align: center;
+    width: 100%;
+    /* 기존 padding 0 24px hover시 우측 흰색 영역이 생겨 수정 */
+    padding: 0 50px;
+    font-size: 5vw;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* slide box */
+#project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+}
+
+#project #project-guide {
+    width: 100vw;
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#project h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    /* 제목 상하 위치 */
+}
+
+.project-nav {
+    width: 24%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.project-nav > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 125px;
+    align-items: left;
+    padding-left: 4vw;
+    height: 100%;
+
+}
+.project-nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.project-nav ul li span{
+    display: block;
+}
+
+.project-nav ul li:hover,
+.project-nav ul li.on {
+    color: var(--main-color);
+    margin-left: 10px;
+    font-weight: 700;
+}
+/* 2depth */
+.project-nav ul li ul{
+    padding-left: 1vw;
+    padding-top: 0.5vw;
+    color: #333;
+}
+.project-nav ul li ul li{
+    font-size: 14px;
+    padding: 0.5vw 0;
+}
+.project-nav ul li ul li.active,
+.project-nav ul li ul li:hover{
+    margin-left: 10px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.project-nav .re-sub{
+}
+.project-nav .re-sub li{
+
+}
+.project-nav .mo-sub{
+    
+}
+.project-nav .mo-sub li{
+    
+}
+
+
+
+
+
+
+.slide-box {
+    width: 76%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+        
+}
+
+.slide-box .slide-btn {
+    background: none;
+    border: 0;
+    position: sticky;
+    float: left;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 12vw);
+    height: 32px;
+    z-index: 7;
+    margin: 0 6vw;
+}
+
+.slide-box .slide-btn .bi {
+    font-size: 32px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.slide-box .slide-btn .up-btn {
+    transform: rotate(-90deg);
+}
+
+.slide-box .slide-btn .down-btn {
+    transform: rotate(-90deg);
+}
+
+.slide-box .slide-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide-text-box{
+    display: none;
+}
+
+.cont-section01{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--main-color) -150% , transparent 70%);
+}
+.cont-section01 article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+}
+#project{
+    background: #fafafa;
+}
+.cont-section01 article h1{
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 10px;
+    border-top: 1px solid var(--main-color);
+}
+.cont-section01 article img{
+    object-fit: contain;
+    height: 100%;
+    position: relative;
+    z-index: 8;
+}
+.cont-section01 article .cont-btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+.cont-section01 article .cont-btn-box button{
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.cont-img-box{
+    width: 100%;
+    height: 46vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 50px 110px -100px #acacac;
+}
+.cont-img-box img:hover{
+    opacity: 0.7;
+    transition: 0.6s;
+}
+
+
+
+
+
+
+/* #about */
+#about {
+    border-bottom: 2px dashed var(--main-color);
+    background: #fafafa;
+    color: #333;
+}
+
+#about h4 {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: var(--main-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+#about #about-guide {
+    display: flex;
+}
+
+#about .profile {
+    width: 50%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.my-img-box{    
+    max-width: 289px;
+    width: 20vw;
+}
+#about .profile img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+#about .profile p {
+}
+
+#about .profile .name {
+    font-weight: 500;
+}
+
+#about .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: calc(100vh - 100px);
+    padding: 40px 0;
+}
+
+#about .info article {
+    display: flex;
+}
+
+#about .info article h5 {
+    width: 20%;
+    min-width: 180px;
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+#about .info article p {
+    margin-bottom: 20px;
+}
