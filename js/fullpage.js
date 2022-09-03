@@ -26,14 +26,14 @@
         animation: 600,
         swipeThreshold:50,
         throttle: 50,
-        responsiveWidth: 1000,
         events:{
-            mouse: false,
+            mouse: true,
             touch:false,
-            keydown: false,}});
-
+            keydown: true,}});
 if (window.matchMedia("(min-width: 501px)").matches){
     pageable;
+
 }else{
     pageable.destroy();
 }
+

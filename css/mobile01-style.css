@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 50px 110px -100px #acacac;
+    box-shadow: 0 50px 80px -80px #acacac;
 }
 .cont-section01 article h1{
     font-weight: 500;

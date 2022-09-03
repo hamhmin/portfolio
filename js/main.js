@@ -221,8 +221,8 @@ console.log('ScrollTop',ScrollTop);
 
     // 색상 변경시 자연스러운 연출 (일시적인 어두운 화면)
     $('.color-box div').click(function () {
-        $('#container').stop().fadeOut(1);
-        $('#container').fadeIn(1000);
+        $('.color-change-shadow').stop().fadeIn(1);
+        $('.color-change-shadow').fadeOut(1000);
     });
 
 
@@ -293,5 +293,72 @@ console.log('ScrollTop',ScrollTop);
         $('.modal').hide();
     });
 
-        $('.slide-box').off('touchmove');
+    // 모바일에서 slide-box 터치스크롤기능 해제
+    $('.slide-box').off('touchmove');
+
+
+    
+    $('#page-1,#page-2,#page-3,page-4').scroll(function(){
+        console.log('스크롤함');
+    });
+
+
+
+
+    function skillAnimation(){
+    // skills animation
+        draw(95, '.skill-chart1', 'var(--main-color)');
+        draw(80, '.skill-chart2', 'var(--main-color)');
+        draw(70, '.skill-chart3','var(--main-color)');
+        draw(80, '.skill-chart4', 'var(--main-color)');
+        draw(80, '.skill-chart5', 'var(--main-color)');
+        draw(90, '.skill-chart6','var(--main-color)');
+        draw(70, '.skill-chart7', 'var(--main-color)');
+        draw(50, '.skill-chart8', 'var(--main-color)');
+     
+      function draw(max, classname, colorname){
+         var i=1;
+          var func1 = setInterval(function(){
+            if(i<max){
+                color1(i,classname,colorname);
+                i++;
+            } else{
+              clearInterval(func1);
+            }
+          },10);
+      }
+      function color1(i, classname,colorname){
+         $(classname).css({
+              "background":"conic-gradient("+colorname+" 0% "+i+"%, #ffffff "+i+"% 100%)"
+         });
+      }
+    // skills annimation end
+
+};
+
+
+if (window.matchMedia("(min-width: 501px)").matches){
+
+    $('*').on({
+        scroll: function(){
+                skillAnimation();
+        }
+    });
+    skillAnimation();
+
+}else{
+    $(window).scroll(function(){
+
+        let a = $(window).scrollTop();
+        let b = document.querySelector('#about').offsetTop;
+        console.log(a , b);
+        // 다음 조건식 #about 상하 10px 반경에 진입시 
+        if( a > b && a < b + 10){
+            skillAnimation();
+        }else if( a < b*2 && a > b*2  - 10){
+            skillAnimation();
+        }
+    });
+}
+
 });

@@ -8,6 +8,9 @@
     margin: 0 auto;
     overflow: hidden;
 }
+#title.container{
+    max-width: none;
+}
 #page-1{
     position: relative;
     overflow: hidden;
@@ -26,7 +29,15 @@ html {
 #page-3 {
     background: #fff;
 }
-
+.title-a{
+    display: block;
+}
+.title-a-mo{
+    display: none;
+}
+.pg-pips-mo{
+    display: none;
+}
 #title {
     display: flex;
     flex-direction: column;
@@ -67,13 +78,6 @@ html {
 .title-a{
     position: relative;
     z-index: 7;
-    display: block;
-}
-.title-a-mo{
-    display: none;
-}
-.pg-pips-mo{
-    display: none;
 }
 @keyframes title-btn {
     100% {
@@ -419,7 +423,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 25px;
+    gap: 40px;
     align-items: center;
     overflow: hidden;
 }
@@ -429,10 +433,15 @@ html {
 .cont-section01 article h1{
     font-weight: 500;
     font-size: 22px;
-    padding-top: 8px;
+    padding-top: 10px;
     border-top: 1px solid var(--main-color);
 }
-
+.cont-section01 article img{
+    object-fit: contain;
+    height: 100%;
+    position: relative;
+    z-index: 8;
+}
 .cont-section01 article .cont-btn-box{
     display: flex;
     justify-content: center;
@@ -443,18 +452,13 @@ html {
     border-radius: 50px;
     padding: 8px 20px;
     font-weight: 500;
-}
-.cont-section01 article img{
-    object-fit: contain;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
     z-index: 8;
+    background: transparent;
 }
+
 .cont-img-box{
-    position: relative;
     width: 100%;
-    height: 35vh;
+    height: 46vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -495,14 +499,13 @@ html {
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
 .my-img-box{    
     max-width: 289px;
-    width: 35vw;
+    width: 20vw;
 }
 #about .profile img {
     width: 100%;
@@ -511,10 +514,7 @@ html {
 }
 
 
-#about .profile article{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#about .profile p {
 }
 
 #about .profile .name {
@@ -524,9 +524,10 @@ html {
 #about .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 50%;
     height: calc(100vh - 100px);
+    padding: 40px 0;
 }
 
 #about .info article {
@@ -535,19 +536,14 @@ html {
 
 #about .info article h5 {
     width: 20%;
-    min-width: 110px;
-    font-size: 16px;
+    min-width: 180px;
+    font-size: 18px;
     color: var(--main-color);
 }
 
 #about .info article p {
     margin-bottom: 20px;
-    font-size: 14px;
 }
-
-
-
-
 
 .modal{
     display: none;
@@ -620,55 +616,55 @@ color: var(--main-color);
 }
 
 
+
 .skill-chart-box{
-    width: calc((50 * 4) + (20 * 3));
-    height: 100%;
+width: calc((50 * 4) + (25 * 3));
+height: 100%;
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+#about .info article.skills ul{
+    width: 100%;
+    height: 50%;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    
-    padding-bottom: 40px;
-    }
-    #about .info article.skills ul{
-        width: 100%;
-        height: 50%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 20px;
-    
-    }
-    .skill-chart {
-        position: relative;
-        display:block;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        transition: 0.3s;
-    
-      }
-      span.center{
-        background: #fff;
-        display : flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top:50%; 
-        left:50%;
-        width:90%; 
-        height:90%;
-        border-radius: 50%;
-         transform: translate(-50%, -50%);
-      }
-      span.center img{
-        height: 50%;
-        object-fit: contain;
-      }
-      #about .info article.skills p.skill-text{
-        position: absolute;
-        bottom: -40px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-weight: 500;
-        font-size: 10px;
-      }
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+
+}
+.skill-chart {
+    position: relative;
+    display:block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+
+  }
+  span.center{
+    background: #fff;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:50%; 
+    left:50%;
+    width:90%; 
+    height:90%;
+    border-radius: 50%;
+     transform: translate(-50%, -50%);
+  }
+  span.center img{
+    height: 50%;
+    object-fit: contain;
+  }
+  .skill-chart .skill-text{
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+  }
