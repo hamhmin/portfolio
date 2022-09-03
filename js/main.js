@@ -10,7 +10,7 @@ $(function () {
 
     // splash 랜덤 인삿말 삽입
     let hi = Math.floor(Math.random() * 3);
-    console.log(hi);
+    console.log('인삿말 번호',hi);
     if (hi == 0) {
         $('.splash p').html('Welcome!');
     }
@@ -23,8 +23,9 @@ $(function () {
 
 
     //slide btn show hide
-    let W = document.querySelector('#offset-top').offsetTop;
-    console.log(222,W);
+    // 아래 변수 안쓰는것같아 일단 주석처리해두었음
+    // let W = document.querySelector('#offset-top').offsetTop;
+    // console.log(222,W);
     let v = document.querySelector('#offset-top').offsetTop;
     let scrollValue = document.querySelector('#offset-top').offsetTop;
     let UpDown = 0;
@@ -42,8 +43,9 @@ $(function () {
     $('#re-web span, #re-web .re-sub li').click(function () {
         $('#re-web ul li, #mo-web ul li').removeClass('active');
         $('.slide-content').fadeOut(1);
-        $('.re-web').fadeIn(600);
         UpDown = 0;
+        $('.re-web').fadeIn(600);
+
         $('#re-web .re-sub li').eq(0).addClass('active');
     });
     $('#mo-web span, #mo-web .mo-sub li').click(function () {
@@ -51,6 +53,8 @@ $(function () {
         $('.slide-content').fadeOut(1);
         UpDown = 0;
         $('.mo-web').fadeIn(600);
+
+        
         $('#mo-web .mo-sub li').eq(0).addClass('active');
 
     });
@@ -133,7 +137,8 @@ $(function () {
             $('.slide-content img').fadeIn(300);
     });
     $('#re-web ul .at').click(function(){
-        $('.slide-box').animate({ scrollTop: 0 }, 0);
+        UpDown = 0;
+        $('.slide-box').animate({ scrollTop: UpDown }, 0);
     });
     $('#re-web ul .de').click(function(){
         UpDown = scrollValue;
@@ -160,14 +165,15 @@ $(function () {
         setTimeout(function(){
         let r = $('#re-web').hasClass('on');
         let m = $('#mo-web').hasClass('on');
-        console.log(m);
+        console.log('v값', v);
         let ScrollTop = $('.slide-box').scrollTop();
         $('#re-web .re-sub li').removeClass('active');
         $('#mo-web .mo-sub li').removeClass('active');
         if( ScrollTop <= 0 && r){
             $('#re-web .re-sub li.at').addClass('active');
         }
-       else if ( ScrollTop >= v && r){
+        // 모바일 에이티컴퍼니 -> 사람그리고치과 이동시 소수점 반올림으로 적용안된부분 v -1 로 조정
+       else if ( ScrollTop >= v-1 && r){
             $('#re-web .re-sub li.de').addClass('active');
         }
         else if( ScrollTop <= 0 && m){
@@ -183,7 +189,7 @@ $(function () {
     setInterval(function(){
     let ScrollTop = $('.slide-box').scrollTop();
 console.log('ScrollTop',ScrollTop);
-},1000);
+},4000);
 
 
     //color pick 등장
@@ -297,14 +303,6 @@ console.log('ScrollTop',ScrollTop);
     $('.slide-box').off('touchmove');
 
 
-    
-    $('#page-1,#page-2,#page-3,page-4').scroll(function(){
-        console.log('스크롤함');
-    });
-
-
-
-
     function skillAnimation(){
     // skills animation
         draw(95, '.skill-chart1', 'var(--main-color)');
@@ -353,9 +351,9 @@ if (window.matchMedia("(min-width: 501px)").matches){
         let b = document.querySelector('#about').offsetTop;
         console.log(a , b);
         // 다음 조건식 #about 상하 10px 반경에 진입시 
-        if( a > b && a < b + 10){
+        if( a > b && a < b + 5){
             skillAnimation();
-        }else if( a < b*2 && a > b*2  - 10){
+        }else if( a < b*2 && a > b*2  - 5){
             skillAnimation();
         }
     });

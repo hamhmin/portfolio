@@ -27,7 +27,8 @@
         swipeThreshold:50,
         throttle: 50,
         events:{
-            mouse: true,
+            // mouse = 마우스드래그 / touch = 모바일 터치? / keydown = 키패드 상하 / wheel = 마우스휠 
+            mouse: false,
             touch:false,
             keydown: true,}});
 if (window.matchMedia("(min-width: 501px)").matches){

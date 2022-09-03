@@ -305,10 +305,11 @@
 .project-nav > ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 125px;
+    justify-content: start;
+    gap: 60px;
     align-items: left;
     padding-left: 4vw;
+    margin-top: 60px;
     height: 100%;
 
 }
