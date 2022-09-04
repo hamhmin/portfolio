@@ -280,7 +280,6 @@ console.log('ScrollTop',ScrollTop);
         if(i <= 1){
                 setInterval(function(){
                     startEffect();
-                    startEffect2();
                 },500);
         }
     }
