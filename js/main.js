@@ -274,20 +274,7 @@ console.log('ScrollTop',ScrollTop);
             g.parentElement.removeChild(g); 
         }.bind(this));
     }
-    // contact particle
-    function startEffect2() {
-        var ww = window.innerWidth;
-        var wh = window.innerHeight
-        var randomX = Math.floor(Math.random() * ww);
-        var randomY = Math.floor(Math.random() * wh);
-        var k = document.createElement("div");
-        k.className = "startEffect";
-        k.style.top = randomY + "px"; k.style.left = randomX + "px";
-        document.querySelector('#contact').appendChild(k);
-        k.addEventListener('animationend', function () { 
-            k.parentElement.removeChild(k); 
-        }.bind(this));
-    }
+
     // 폭죽 개수 및 반복시간
     for(let i = 0; i < 1 ; i++){
         if(i <= 1){
