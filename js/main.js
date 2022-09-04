@@ -260,29 +260,63 @@ console.log('ScrollTop',ScrollTop);
     }
     document.addEventListener('click', clickEffect);
     //접속시 랜덤 폭죽 생성
-    function startEffect(e) {
-        var ww =window.innerWidth;
+    // title particle
+    function startEffect() {
+        var ww = window.innerWidth;
         var wh = window.innerHeight
         var randomX = Math.floor(Math.random() * ww);
         var randomY = Math.floor(Math.random() * wh);
         var g = document.createElement("div");
         g.className = "startEffect";
         g.style.top = randomY + "px"; g.style.left = randomX + "px";
-        document.querySelector('#title').appendChild(g); 
+        document.querySelector('#title').appendChild(g);
         g.addEventListener('animationend', function () { 
             g.parentElement.removeChild(g); 
         }.bind(this));
     }
+    // contact particle
+    function startEffect2() {
+        var ww = window.innerWidth;
+        var wh = window.innerHeight
+        var randomX = Math.floor(Math.random() * ww);
+        var randomY = Math.floor(Math.random() * wh);
+        var k = document.createElement("div");
+        k.className = "startEffect";
+        k.style.top = randomY + "px"; k.style.left = randomX + "px";
+        document.querySelector('#contact').appendChild(k);
+        k.addEventListener('animationend', function () { 
+            k.parentElement.removeChild(k); 
+        }.bind(this));
+    }
+    // 폭죽 개수 및 반복시간
     for(let i = 0; i < 1 ; i++){
         if(i <= 1){
                 setInterval(function(){
                     startEffect();
+                    startEffect2();
                 },500);
         }
     }
 
+    // 작품별 자세히보기 버튼 클릭시 이미지, 깃허브 주소 해당 요소에 맞게 교체
+
     $('.c01 .view-more').click(function(){
         $('.modal img').attr('src','./images/project-img01.jpg');
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/solo-work01');
+        $('.modal').show();
+    });
+    $('.c02 .view-more').click(function(){
+        $('.modal img').attr('src','./images/project-img02.jpg');
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/2team-0811');
+        $('.modal').show();
+    });
+    $('.c03 .view-more').click(function(){
+        $('.modal img').attr('src','./images/project-img03.jpg');
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/drawfit-mobile-web');
+        $('.modal').show();
+    });
+    $('.c04 .view-more').click(function(){
+        $('.modal img').attr('src','./images/project-img04.jpg');
         $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/audio-technica')
         $('.modal').show();
     });
@@ -290,14 +324,7 @@ console.log('ScrollTop',ScrollTop);
         $('.modal').hide();
     });
 
-    $('.c02 .view-more').click(function(){
-        $('.modal img').attr('src','./images/project-img02.jpg');
-        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/drawfit-mobile-web');
-        $('.modal').show();
-    });
-    $('.close-btn').click(function(){
-        $('.modal').hide();
-    });
+
 
     // 모바일에서 slide-box 터치스크롤기능 해제
     $('.slide-box').off('touchmove');

@@ -130,6 +130,7 @@ html {
     color: var(--light);
     font-weight: 300;
     color: #fff;
+    overflow: hidden;
 }
 
 #contact h4 {
@@ -142,6 +143,8 @@ html {
 #contact article {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 #contact .tel p {
@@ -254,6 +257,8 @@ html {
     transition: 0.5s;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 #contact .email span {
@@ -572,21 +577,20 @@ html {
     justify-content: center;
     align-items:center;
     margin-right: 20px;
-    gap: 20px;
+    gap: 10px;
 }
 .modal .bi-github{
-    font-size: 32px;
+    font-size: 24px;
     color: var(--main-color);
     transition: 0.6s;
 }
 .modal .bi-github:hover{
-    opacity: 0.5;
-    font-size: 28px;
+    opacity: 0.7;
 }
 .modal .close-btn{
     border-radius: 4px;
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     background: #fff;
     border: 2px solid var(--main-color);
     display: flex;
@@ -597,7 +601,7 @@ html {
 }
 .modal .close-btn:hover {
     transform: scale(0.9);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .modal .close-btn .bi-x{
     font-size: 24px;
