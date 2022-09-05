@@ -303,6 +303,9 @@ html {
     width: 24%;
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 5;
 }
 
@@ -313,8 +316,6 @@ html {
     gap: 80px;
     align-items: left;
     padding-left: 4vw;
-    margin-top: 100px;
-    height: 100%;
 
 }
 .project-nav ul li {

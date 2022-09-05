@@ -1,5 +1,5 @@
 # portfolio
-0826~work
+안녕하세요. 함형민의 포트폴리오 사이트입니다.
 
 # 웹사이트링크
 https://hamhmin.github.io/portfolio/
@@ -22,10 +22,11 @@ https://github.com/hamhmin/portfolio
 9. contect 페이지 e-mail (hover)
 10. 클릭시 파동효과
 11. 뷰포트width 700~ 900 pc-2 , 500~700 모바일  미디어쿼리 css 제작
-12. project 작품 자세히보기 버튼 누를시 해당 이미지경로, 깃허브 주소로 (attr)js 변경 
 
 ## 수정사항  
-
+1. pips의 z-index: 1000으로 시작된 높은 수의 z-index 1~10 으로 줄이기// 완
+2. 뷰포트를 줄였을때 생기는 텍스트상자,박스의 결함// 완
+3. project nav #all 과 #responsive 의 간격 줄이기. // 완
 
 ## 추가 작업 사항
 

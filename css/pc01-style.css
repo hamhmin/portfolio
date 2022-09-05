@@ -127,7 +127,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     color: var(--light);
     font-weight: 300;
     color: #fff;
@@ -260,6 +260,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    max-width: 1440px;
 }
 
 #contact .email span {
@@ -267,7 +268,7 @@
     width: 100%;
     /* 기존 padding 0 24px hover시 우측 흰색 영역이 생겨 수정 */
     padding: 0 50px;
-    font-size: 5vw;
+    font-size: 4.8vw;
     cursor: pointer;
     font-weight: 700;
 }
@@ -275,7 +276,7 @@
 /* slide box */
 #project {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     color: #333;
@@ -305,6 +306,9 @@
     height: 100%;
     position: relative;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-nav > ul {
@@ -314,8 +318,6 @@
     gap: 60px;
     align-items: left;
     padding-left: 4vw;
-    margin-top: 60px;
-    height: 100%;
 
 }
 .project-nav ul li {
@@ -482,6 +484,9 @@
     border-bottom: 2px dashed var(--main-color);
     background: #fafafa;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #about h4 {
@@ -500,9 +505,10 @@
 #about .profile {
     width: 50%;
     height: calc(100vh - 100px);
+    gap: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -511,7 +517,6 @@
     width: 20vw;
 }
 #about .profile img {
-    min-width: 289px;
     width: 100%;
     object-fit: cover;
     display: block;
@@ -530,7 +535,7 @@
 #about .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
     height: calc(100vh - 100px);
     padding: 40px 0;
