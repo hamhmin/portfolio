@@ -6,42 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- <!— 사이트 소개글 —> -->
-        <meta name="description" content="함형민의 포트폴리오 웹사이트입니다." />
-        <!-- <!— 검색 키워드 —> -->
-        <meta name="keywords" content="웹퍼블리셔 포트폴리오" />
-        <!-- <!— 작성자 —> -->
-        <meta name="author" content="ham hyungmin" />
-        <!-- <!— SNS 공유 정보 -OG(open graph)-->
-        <!-- <!— 사이트명(title) —> -->
-        <meta name="og:site_name" content="함형민의 포트폴리오" />
-        <!-- 웹사이트 대표 이미지(썸네일) -->
-        <meta property="og:image" content="site_thumbnails.png">
-        <!-- 아이콘 등록 -->
-        <link rel="shortcut icon" href="fabicon.png">
-        <title>portfolio</title>
-        <!-- pc01 02 , mobile.css -->
-        <link rel="stylesheet" href="css/pc01-style.css" media="screen and (min-width : 900px)">
-        <link rel="stylesheet" href="css/pc02-style.css" media="screen and (max-width : 899px)">
-        <link rel="stylesheet" href="css/mobile01-style.css" media="screen and (max-width : 700px)">
-        <link rel="stylesheet" href="css/mobile02-style.css" media="screen and (max-width : 500px)">
+    <!-- <!— 사이트 소개글 —> -->
+    <meta name="description" content="함형민의 포트폴리오 웹사이트입니다." />
+    <!-- <!— 검색 키워드 —> -->
+    <meta name="keywords" content="웹퍼블리셔 포트폴리오" />
+    <!-- <!— 작성자 —> -->
+    <meta name="author" content="ham hyungmin" />
+    <!-- <!— SNS 공유 정보 -OG(open graph)-->
+    <!-- <!— 사이트명(title) —> -->
+    <meta name="og:site_name" content="함형민의 포트폴리오" />
+    <!-- 웹사이트 대표 이미지(썸네일) -->
+    <meta property="og:image" content="site_thumbnails.png">
+    <!-- 아이콘 등록 -->
+    <link rel="shortcut icon" href="fabicon.png">
+    <title>portfolio</title>
+    <!-- pc01 02 , mobile.css -->
+    <link rel="stylesheet" href="css/pc01-style.css" media="screen and (min-width : 900px)">
+    <link rel="stylesheet" href="css/pc02-style.css" media="screen and (max-width : 899px)">
+    <link rel="stylesheet" href="css/mobile01-style.css" media="screen and (max-width : 700px)">
+    <link rel="stylesheet" href="css/mobile02-style.css" media="screen and (max-width : 500px)">
 </head>
 
 <body>
-     <!-- splash -->
+    <!-- splash -->
     <div class="splash">
         <p></p>
     </div>
     <div class="color-change-shadow"></div>
 
-    <!-- <nav class="pg-pips-mo">
-        <ul>
-            <li><a href="#title"><span></span></a></li>
-            <li><a href="#about"><span></span></a></li>
-            <li><a href="#project"><span></span></a></li>
-            <li><a href="#contact"><span></span></a></li>
-        </ul>
-    </nav> -->
+
 
     <!-- pips text -->
     <ul class="pips-text">
@@ -50,22 +43,31 @@
         <li>Project</li>
         <li>Contact</li>
     </ul>
-
+    <div class="mobile-pips">
+    <nav class="pg-pips">
+        <ul>
+            <li><a href="#page-1"><span></span></a></li>
+            <li><a href="#page-2"><span></span></a></li>
+            <li><a href="#page-3"><span></span></a></li>
+            <li><a href="#page-4"><span></span></a></li>
+        </ul>
+    </nav>
+</div>
     <!-- 작품 모달창 -->
-<div class="modal">
-    <figure class="modal-img-box">
+    <div class="modal">
+        <figure class="modal-img-box">
 
-        <div class="modal-btn-box">
-            <button class="close-btn"><i class="bi bi-x"></i></button>
-            <a target="_blank" href=""><i class="bi bi-github"></i></a>
-        
+            <div class="modal-btn-box">
+                <button class="close-btn"><i class="bi bi-x"></i></button>
+                <a target="_blank" href=""><i class="bi bi-github"></i></a>
+
+
+            </div>
+            <img src="./images/project-img01.jpg" alt="작품">
+
+        </figure>
 
     </div>
-        <img src="./images/project-img01.jpg" alt="작품">
-
-    </figure>
-
-</div>
 
 
 
@@ -85,10 +87,8 @@
                 <!-- <h1>함형민의<br>PORTFORIO</h1> -->
                 <div class="svg-box">
                     <svg width="191" height="100" viewBox="0 0 191 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text class="main-text"
-                            id="name4"
-                            xml:space="preserve" style="white-space: pre" font-family="Noto Sans KR" font-size="36"
-                            font-weight="100" letter-spacing="0em">
+                        <text class="main-text" id="name4" xml:space="preserve" style="white-space: pre"
+                            font-family="Noto Sans KR" font-size="36" font-weight="100" letter-spacing="0em">
                             <tspan x="29.2656" y="40.12">&#xd568;&#xd615;&#xbbfc;&#xc758;&#10;</tspan>
                             <tspan x="0.367188" y="90.12">PORTFOLIO</tspan>
                         </text>
@@ -97,8 +97,12 @@
 
 
 
-                <a class="title-a" href="#page-2"><p><span>View more</span><i class="bi bi-arrow-right"></i></p></a>
-                <a class="title-a-mo" href="#about"><p><span>View more</span><i class="bi bi-arrow-right"></i></p></a>
+                <a class="title-a" href="#page-2">
+                    <p><span>View more</span><i class="bi bi-arrow-right"></i></p>
+                </a>
+                <a class="title-a-mo" href="#about">
+                    <p><span>View more</span><i class="bi bi-arrow-right"></i></p>
+                </a>
             </div>
         </div>
         <div data-anchor="Page 2">
@@ -107,47 +111,71 @@
                 <section id="about-guide">
                     <div class="profile">
                         <div class="my-img-box">
-                        <img src="./images/my.jpg" alt="프로필">
+                            <img src="./images/my.jpg" alt="프로필">
                         </div>
                         <article>
-                        <p class="name">함형민<br>HAM HYUNGMIN</p>
-                        <P>경험하고 상상할 수 있는 모든 것을 <br>실현시키고 싶습니다.</P>
-                    </article>
+                            <p class="name">함형민<br>HAM HYUNGMIN</p>
+                            <P>경험하고 상상할 수 있는 모든 것을 <br>실현시키고 싶습니다.</P>
+                        </article>
                     </div>
                     <div class="info">
                         <article class="education">
                             <h5>education</h5>
                             <div class="edu-text">
-                            <p>2년제 졸업 (유한대학교 시각디자인학과)<br>
-                                (2018~2020)</p>
-                            <p>이젠컴퓨터 ux/ui웹퍼블리셔 과정<br>
-                                (2022.04.17~2022.09.06)</p>
+                                <p>2년제 졸업 (유한대학교 시각디자인학과)<br>
+                                    (2018~2020)</p>
+                                <p>이젠컴퓨터 ux/ui웹퍼블리셔 과정<br>
+                                    (2022.04.17~2022.09.06)</p>
                             </div>
                         </article>
                         <article class="certificates">
                             <h5>certificates</h5>
                             <div class="cert-text">
-                            <p>웹디자인기능사</p>
-                            <p>정보처리기능사</p>
-                            <p>컴퓨터그래픽스운용기능사</p>
-                        </div>
+                                <p>웹디자인기능사</p>
+                                <p>정보처리기능사</p>
+                                <p>컴퓨터그래픽스운용기능사</p>
+                            </div>
                         </article>
                         <article class="skills">
                             <h5>skills</h5>
                             <section class="skill-chart-box">
-                            <ul>
-                                <li class="skill-chart skill-chart1"><span class="center"><img src="images/skill-html.png"></span><p class="skill-text">HTML5</p></li>
-                                <li class="skill-chart skill-chart2"><span class="center"><img src="images/skill-css.png"></span><p class="skill-text">CSS3</p></li>
-                                <li class="skill-chart skill-chart3"><span class="center"><img src="images/skill-javascript.png"></span><p class="skill-text">Javascript</p></li>
-                                <li class="skill-chart skill-chart4"><span class="center"><img src="images/skill-jquery.png"></span><p class="skill-text">jQuery</p></li>
-                            </ul>
-                            <ul>
-                                <li class="skill-chart skill-chart5"><span class="center"><img src="images/skill-figma.png"></span><p class="skill-text">Figma</p></li>
-                                <li class="skill-chart skill-chart6"><span class="center"><img src="images/skill-illustrator.png"></span><p class="skill-text">Illustrator</p></li>
-                                <li class="skill-chart skill-chart7"><span class="center"><img src="images/skill-photoshop.png"></span><p class="skill-text">Photoshop</p></li>
-                                <li class="skill-chart skill-chart8"><span class="center"><img src="images/skill-vue.png"></span><p class="skill-text">Vue</p></li>
-                            </ul>
-                        </section>
+                                <ul>
+                                    <li class="skill-chart skill-chart1"><span class="center"><img
+                                                src="images/skill-html.png"></span>
+                                        <p class="skill-text">HTML5</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart2"><span class="center"><img
+                                                src="images/skill-css.png"></span>
+                                        <p class="skill-text">CSS3</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart3"><span class="center"><img
+                                                src="images/skill-javascript.png"></span>
+                                        <p class="skill-text">Javascript</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart4"><span class="center"><img
+                                                src="images/skill-jquery.png"></span>
+                                        <p class="skill-text">jQuery</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="skill-chart skill-chart5"><span class="center"><img
+                                                src="images/skill-figma.png"></span>
+                                        <p class="skill-text">Figma</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart6"><span class="center"><img
+                                                src="images/skill-illustrator.png"></span>
+                                        <p class="skill-text">Illustrator</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart7"><span class="center"><img
+                                                src="images/skill-photoshop.png"></span>
+                                        <p class="skill-text">Photoshop</p>
+                                    </li>
+                                    <li class="skill-chart skill-chart8"><span class="center"><img
+                                                src="images/skill-vue.png"></span>
+                                        <p class="skill-text">Vue</p>
+                                    </li>
+                                </ul>
+                            </section>
                         </article>
                     </div>
                 </section>
@@ -164,13 +192,13 @@
                                 <ul class="re-sub">
                                     <li class="at">에이티 컴퍼니</li>
                                     <li class="de">사람그리고치과</li>
-                            </ul>
+                                </ul>
                             </li>
                             <li id="mo-web"><span>Mobile Web</span>
                                 <ul class="mo-sub">
                                     <li class="dr">드로우핏</li>
                                     <li class="au">오디오테크니카</li>
-                            </ul>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -184,12 +212,12 @@
                                 <article>
                                     <h1>에이티컴퍼니 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup01.png" alt="목업">
-                                    <div class="slide-text-box">
-                                        <p class="left-text"></p>
-                                        <p class="right-text"></p>
+                                        <img src="./images/mockup01.png" alt="목업">
+                                        <div class="slide-text-box">
+                                            <p class="left-text"></p>
+                                            <p class="right-text"></p>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
                                         <a href="https://hamhmin.github.io/solo-work01/" target="_blank">
@@ -204,12 +232,12 @@
                                 <article>
                                     <h1>사람그리고치과 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup02.png" alt="목업">
-                                    <div class="slide-text-box">
-                                        <p class="left-text"></p>
-                                        <p class="right-text"></p>
+                                        <img src="./images/mockup02.png" alt="목업">
+                                        <div class="slide-text-box">
+                                            <p class="left-text"></p>
+                                            <p class="right-text"></p>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
                                         <a href="https://hamhmin.github.io/2team-0811/" target="_blank">
@@ -224,12 +252,12 @@
                                 <article>
                                     <h1>DRAW FIT 모바일 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup03.png" alt="목업">
-                                    <div class="slide-text-box">
-                                        <p class="left-text"></p>
-                                        <p class="right-text"></p>
+                                        <img src="./images/mockup03.png" alt="목업">
+                                        <div class="slide-text-box">
+                                            <p class="left-text"></p>
+                                            <p class="right-text"></p>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
                                         <a href="https://hamhmin.github.io/drawfit-mobile-web/" target="_blank">
@@ -244,12 +272,12 @@
                                 <article>
                                     <h1>오디오테크니카 반응형 웹 제작</h1>
                                     <div class="cont-img-box">
-                                    <img src="./images/mockup04.png" alt="목업">
-                                    <div class="slide-text-box">
-                                        <p class="left-text"></p>
-                                        <p class="right-text"></p>
+                                        <img src="./images/mockup04.png" alt="목업">
+                                        <div class="slide-text-box">
+                                            <p class="left-text"></p>
+                                            <p class="right-text"></p>
+                                        </div>
                                     </div>
-                                </div>
                                     <div class="cont-btn-box">
                                         <button class="view-more">자세히 보기</button>
                                         <a href="https://hamhmin.github.io/audio-technica-project/" target="_blank">
@@ -278,8 +306,10 @@
                     <div class="social">
                         <p>Social</p>
                         <div class="sns">
-                            <a href="https://www.instagram.com/hahy_mi/" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="https://open.kakao.com/o/ghYFVpze" target="_blank"><img src="./images/kakao.png"  alt="kakao"></a><a href="" target="_blank"><i class="bi bi-github"></i></a>
+                            <a href="https://www.instagram.com/hahy_mi/" target="_blank"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="https://open.kakao.com/o/ghYFVpze" target="_blank"><img src="./images/kakao.png"
+                                    alt="kakao"></a><a href="" target="_blank"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                     <p class="year">hamhmin ©2022 </p>

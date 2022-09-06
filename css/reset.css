@@ -85,12 +85,23 @@ body {
     background: #fff;
     border: 1px solid rgba(0,0,0,0.1);
 }   
-.pg-pips ul li:hover a{
-    width: 5px;
-    height:24px;
-    background: var(--main-color);
-    transition: 0.5s;
+@media (hover:hover) {
+    .pg-pips ul li:hover a{
+        width: 5px;
+        height:24px;
+        background: var(--main-color);
+        transition: 0.5s;
+    }
+    .pg-pips ul li a.active, .pg-pips ul li:hover a.active {
+        width: 5px;
+        position: relative;
+        animation-name: pips-active;
+        animation-duration: 0.2s;
+        animation-fill-mode:forwards ;
+        background: var(--main-color);
+    }
 }
+
 .pg-pips ul li a.active, .pg-pips ul li:hover a.active {
     width: 5px;
     position: relative;

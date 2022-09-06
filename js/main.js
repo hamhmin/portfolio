@@ -372,4 +372,27 @@ if (window.matchMedia("(min-width: 501px)").matches){
     });
 }
 
+
+// mobile-pips page animation
+    $(window).scroll(function(){
+        // 소수점 없애고, +1 로 scroll값 정수화 
+        let mobileScroll = Math.floor($(window).scrollTop())+1;
+        let Page1 = document.querySelector('#page-1').offsetTop;
+        let Page2 = document.querySelector('#page-2').offsetTop;
+        let Page3 = document.querySelector('#page-3').offsetTop;
+        let Page4 = document.querySelector('#page-4').offsetTop;
+        // console.log('mobileScroll = ',mobileScroll,'page1 = ',Page1,'page2 = ',Page2,'page3 = ',Page3,'page4 = ',Page4);
+        $('.mobile-pips ul li a').removeClass('active');
+        if( Page1 <= mobileScroll && Page2 > mobileScroll ){
+            $('.mobile-pips ul li a').eq(0).addClass('active');
+        }else if( Page2 <= mobileScroll && Page3 > mobileScroll ){
+            $('.mobile-pips ul li a').eq(1).addClass('active');
+        }else if( Page3 <= mobileScroll && Page4 > mobileScroll ){
+            $('.mobile-pips ul li a').eq(2).addClass('active');
+        }else if( Page4 <= mobileScroll){
+            $('.mobile-pips ul li a').eq(3).addClass('active');
+        }
+    });
+
+
 });
