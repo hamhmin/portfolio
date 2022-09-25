@@ -33,9 +33,7 @@
         <p></p>
     </div>
     <div class="color-change-shadow"></div>
-
-
-
+    
     <!-- pips text -->
     <ul class="pips-text">
         <li>Title</li>
@@ -46,7 +44,7 @@
     <div class="mobile-pips">
     <nav class="pg-pips">
         <ul>
-            <li><a href="#page-1"><span></span></a></li>
+            <li><a href="#page-1" class="active"><span></span></a></li>
             <li><a href="#page-2"><span></span></a></li>
             <li><a href="#page-3"><span></span></a></li>
             <li><a href="#page-4"><span></span></a></li>
@@ -60,20 +58,15 @@
             <div class="modal-btn-box">
                 <button class="close-btn"><i class="bi bi-x"></i></button>
                 <a target="_blank" href=""><i class="bi bi-github"></i></a>
-
-
             </div>
             <img src="./images/project-img01.jpg" alt="작품">
-
         </figure>
 
     </div>
 
-
-
     <!-- #container -->
     <div id="container">
-        <div data-anchor="Page 1">
+        <div id="page-1">
 
             <div id="title" class="container">
                 <div class="color-box">
@@ -94,18 +87,12 @@
                         </text>
                     </svg>
                 </div>
-
-
-
                 <a class="title-a" href="#page-2">
-                    <p><span>View more</span><i class="bi bi-arrow-right"></i></p>
-                </a>
-                <a class="title-a-mo" href="#about">
                     <p><span>View more</span><i class="bi bi-arrow-right"></i></p>
                 </a>
             </div>
         </div>
-        <div data-anchor="Page 2">
+        <div id="page-2">
             <div id="about" class="container">
                 <h4>About</h4>
                 <section id="about-guide">
@@ -181,7 +168,7 @@
                 </section>
             </div>
         </div>
-        <div data-anchor="Page 3">
+        <div id="page-3">
             <div id="project" class="container">
                 <h4>Project</h4>
                 <section id="project-guide">
@@ -292,7 +279,7 @@
                 </section>
             </div>
         </div>
-        <div data-anchor="Page 4">
+        <div id="page-4">
             <div id="contact" class="container">
                 <h4>Contact</h4>
                 <!-- <h1 class="gradient-text">hamhmin7@naver.com</h1> -->
@@ -321,7 +308,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/fullpage.js"></script>
+    <!-- <script src="js/fullpage.js"></script> -->
 
 </body>
 

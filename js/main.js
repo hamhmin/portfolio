@@ -1,8 +1,9 @@
 $(function () {
     // splash
     // $('.splash').hide();
+    $('.pg-pips').hide();
     setTimeout(function(){
-        $('.splash p').fadeIn();
+        $('.splash p,.pg-pips').fadeIn();
     },1000);
     setTimeout(function(){
         $('.splash').fadeOut();
@@ -236,14 +237,7 @@ console.log('ScrollTop',ScrollTop);
 
 
 
-    // 페이지 네비게이션 호버시 텍스트 등장
-    $('.pg-pips ul li').mouseenter(function () {
-        let pipsTxt = $(this).index();
-        $('.pips-text li').eq(pipsTxt).css('opacity', '1');
-    });
-    $('.pg-pips ul li').mouseleave(function () {
-        $('.pips-text li').css('opacity', '0');
-    });
+
 
 
 
@@ -330,6 +324,7 @@ console.log('ScrollTop',ScrollTop);
       function draw(max, classname, colorname){
          var i=1;
           var func1 = setInterval(function(){
+           
             if(i<max){
                 color1(i,classname,colorname);
                 i++;
@@ -344,35 +339,56 @@ console.log('ScrollTop',ScrollTop);
          });
       }
     // skills annimation end
-
 };
 
 
-if (window.matchMedia("(min-width: 501px)").matches){
+// if (window.matchMedia("(min-width: 501px)").matches){
 
-    $('*').on({
-        scroll: function(){
-                skillAnimation();
-        }
-    });
-    skillAnimation();
+//     $('*').on({
+//         scroll: function(){
+//                 skillAnimation();
+//         }
+//     });
+//     skillAnimation();
 
-}else{
-    $(window).scroll(function(){
 
-        let a = $(window).scrollTop();
-        let b = document.querySelector('#about').offsetTop;
-        console.log(a , b);
-        // 다음 조건식 #about 상하 10px 반경에 진입시 
-        if( a > b && a < b + 5){
-            skillAnimation();
-        }else if( a < b*2 && a > b*2  - 5){
+
+$(window).scroll(function(){
+    let a = $(window).scrollTop();
+    let b = document.querySelector('#about').offsetTop;
+    console.log(a , b);
+    if (window.matchMedia("(min-width: 501px)").matches){
+        if( a < b && a > b - 50){
             skillAnimation();
         }
+        else if( a > b*2 && a < b*2  + 50){
+            skillAnimation();
+        }
+    }else{
+    if( a > b && a < b + 5){
+        skillAnimation();
+    }
+    // 다음 조건식 #about 상하 10px 반경에 진입시 
+    else if( a < b*2 && a > b*2  - 5){
+        skillAnimation();
+    }
+    }
     });
-}
+    $('.title-a').click(function(){
+        setTimeout(function(){
+            skillAnimation();
+        },500);
+    });
 
-
+        // 페이지 네비게이션 호버시 텍스트 등장
+        $('.pg-pips ul li').mouseenter(function () {
+            let pipsTxt = $(this).index();
+            $('.pips-text li').eq(pipsTxt).css('opacity', '1');
+        });
+        $('.pg-pips ul li').mouseleave(function () {
+            $('.pips-text li').css('opacity', '0');
+        });
+        $('.pips-text li').eq(0).css('opacity', '1');
 // mobile-pips page animation
     $(window).scroll(function(){
         // 소수점 없애고, +1 로 scroll값 정수화 
@@ -384,15 +400,37 @@ if (window.matchMedia("(min-width: 501px)").matches){
         // console.log('mobileScroll = ',mobileScroll,'page1 = ',Page1,'page2 = ',Page2,'page3 = ',Page3,'page4 = ',Page4);
         $('.mobile-pips ul li a').removeClass('active');
         if( Page1 <= mobileScroll && Page2 > mobileScroll ){
+            $('.pips-text li').css('opacity', '0');
             $('.mobile-pips ul li a').eq(0).addClass('active');
+            $('.pips-text li').eq(0).css('opacity', '1');
         }else if( Page2 <= mobileScroll && Page3 > mobileScroll ){
+            $('.pips-text li').css('opacity', '0');
             $('.mobile-pips ul li a').eq(1).addClass('active');
+            $('.pips-text li').eq(1).css('opacity', '1');
         }else if( Page3 <= mobileScroll && Page4 > mobileScroll ){
+            $('.pips-text li').css('opacity', '0');
             $('.mobile-pips ul li a').eq(2).addClass('active');
+            $('.pips-text li').eq(2).css('opacity', '1');
         }else if( Page4 <= mobileScroll){
+            $('.pips-text li').css('opacity', '0');
             $('.mobile-pips ul li a').eq(3).addClass('active');
+            $('.pips-text li').eq(3).css('opacity', '1');
         }
     });
+
+    // pc에서 vw가 500px까지 줄어들었을때 새로고침
+    setInterval(function(){
+        $(window).resize(function(){
+            let vw = window.innerWidth;
+            console.log(vw);
+            if( vw <= 500 ){
+                location.reload();
+            }
+            else if(vw >= 520 && vw <=550){
+                location.reload(); 
+            }
+        });
+    },1000);
 
 
 });

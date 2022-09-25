@@ -1,9 +1,7 @@
 @import url('reset.css');
 @import url('svg.css');
 
-.mobile-pips{
-    display: none;
-}
+
 .container {
     max-width: 1440px;
     width: 100vw;
@@ -22,21 +20,12 @@
 #page-4 {
     background-image: linear-gradient(to left, rgb(255, 255, 255) -100%, var(--main-color));
 }
-
-
-
 #page-2,
 #page-3 {
     background: #fff;
 }
 .title-a{
     display: block;
-}
-.title-a-mo{
-    display: none;
-}
-.pg-pips-mo{
-    display: none;
 }
 #title {
     display: flex;
@@ -69,7 +58,6 @@
     align-items: center;
     justify-content: space-around;
     transition: 0.5s;
-    margin-bottom: 30px;
     animation: title-btn 3s forwards;
     opacity: 0;
     animation-delay: 4s;
@@ -355,23 +343,6 @@
     font-weight: 500;
     color: var(--main-color);
 }
-.project-nav .re-sub{
-}
-.project-nav .re-sub li{
-
-}
-.project-nav .mo-sub{
-    
-}
-.project-nav .mo-sub li{
-    
-}
-
-
-
-
-
-
 .slide-box {
     width: 76%;
     height: 100%;
@@ -379,7 +350,6 @@
     position: relative;
         
 }
-
 .slide-box .slide-btn {
     background: none;
     border: 0;
@@ -395,7 +365,6 @@
     z-index: 7;
     margin: 0 6vw;
 }
-
 .slide-box .slide-btn .bi {
     font-size: 32px;
     color: var(--main-color);
@@ -463,7 +432,6 @@
     z-index: 8;
     background: transparent;
 }
-
 .cont-img-box{
     width: 100%;
     height: 46vh;
@@ -476,11 +444,6 @@
     opacity: 0.7;
     transition: 0.6s;
 }
-
-
-
-
-
 
 /* #about */
 #about {
@@ -500,11 +463,9 @@
     font-size: 24px;
     text-align: center;
 }
-
 #about #about-guide {
     display: flex;
 }
-
 #about .profile {
     width: 50%;
     height: calc(100vh - 100px);
