@@ -423,11 +423,8 @@ $(window).scroll(function(){
         $(window).resize(function(){
             let vw = window.innerWidth;
             console.log(vw);
-            if( vw <= 500 ){
+            if(vw >= 520 && vw <=550){
                 location.reload();
-            }
-            else if(vw >= 520 && vw <=550){
-                location.reload(); 
             }
         });
     },1000);
