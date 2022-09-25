@@ -22,18 +22,18 @@ https://github.com/hamhmin/portfolio
 9. contect 페이지 e-mail (hover)
 10. 클릭시 파동효과
 11. 뷰포트width 700~ 900 pc-2 , 500~700 모바일  미디어쿼리 css 제작
+12.splash 시작 화면에서 스크롤 해제
 
 ## 수정사항  
-1. pips의 z-index: 1000으로 시작된 높은 수의 z-index 1~10 으로 줄이기// 완
-2. 뷰포트를 줄였을때 생기는 텍스트상자,박스의 결함// 완
-3. project nav #all 과 #responsive 의 간격 줄이기. // 완
+1. pips의 z-index: 1000으로 시작된 높은 수의 z-index 1~10 으로 줄이기// 완료
+2. 뷰포트를 줄였을때 생기는 텍스트상자,박스의 결함// 완료
+3. project nav #all 과 #responsive 의 간격 줄이기. // 완료
 
 ## 추가 작업 사항
 
 
 ## 라이브러리
 - 제이쿼리
-- fullpage
 - Bootstrap 아이콘
 
 ## tool
