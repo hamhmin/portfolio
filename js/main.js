@@ -67,8 +67,6 @@ $(function () {
     });
 
 
-    
-
     // 하위 메뉴 클릭시 형제요소의 remove .active
     $('#re-web .re-sub li').eq(0).click(function(){
         $('#re-web .re-sub li').eq(1).removeClass('active');
@@ -233,14 +231,6 @@ console.log('ScrollTop',ScrollTop);
     });
 
 
-
-
-
-
-
-
-
-
     // 클릭시 생성되는 원, 그 원이 애니메이션으로 불투명도,스케일 조정, 애니메이션이 끝난후 코드 삭제
 
     function clickEffect(e) {
@@ -308,7 +298,8 @@ console.log('ScrollTop',ScrollTop);
 
     // 모바일에서 slide-box 터치스크롤기능 해제
     $('.slide-box').off('touchmove');
-
+    // splash 화면에서 스크롤 해제
+    $('.splash').on('mousewheel',false).on('touchmove',false);
 
     function skillAnimation(){
     // skills animation
@@ -341,15 +332,6 @@ console.log('ScrollTop',ScrollTop);
     // skills annimation end
 };
 
-
-// if (window.matchMedia("(min-width: 501px)").matches){
-
-//     $('*').on({
-//         scroll: function(){
-//                 skillAnimation();
-//         }
-//     });
-//     skillAnimation();
 
 
 
@@ -428,6 +410,4 @@ $(window).scroll(function(){
             }
         });
     },1000);
-
-
 });
