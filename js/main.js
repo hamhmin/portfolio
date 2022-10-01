@@ -1,6 +1,7 @@
 $(function () {
     // splash
-    // $('.splash').hide();
+    $('.splash').hide();
+    $('.splash').show();
     $('.pg-pips').hide();
     setTimeout(function(){
         $('.splash p,.pg-pips').fadeIn();
@@ -22,11 +23,7 @@ $(function () {
         $('.splash p').html('안녕하세요!');
     }
 
-
     //slide btn show hide
-    // 아래 변수 안쓰는것같아 일단 주석처리해두었음
-    // let W = document.querySelector('#offset-top').offsetTop;
-    // console.log(222,W);
     let v = document.querySelector('#offset-top').offsetTop;
     let scrollValue = document.querySelector('#offset-top').offsetTop;
     let UpDown = 0;
@@ -287,7 +284,7 @@ console.log('ScrollTop',ScrollTop);
     });
     $('.c04 .view-more').click(function(){
         $('.modal img').attr('src','./images/project-img04.jpg');
-        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/audio-technica')
+        $('.modal .modal-btn-box a').attr('href','https://github.com/hamhmin/audio-technica');
         $('.modal').show();
     });
     $('.close-btn').click(function(){
@@ -410,4 +407,16 @@ $(window).scroll(function(){
             }
         });
     },1000);
+
+    let vh1 = window.innerHeight;
+    if (window.matchMedia("(min-width: 501px)").matches){
+        // 501px 이상일때 vh 조절시 새로고침
+        $(window).resize(function(){
+            let vh2 = window.innerHeight;
+            console.log('vh',vh1 , vh2);
+            if(vh1 != vh2){
+                location.reload();
+            }
+        });
+    }
 });

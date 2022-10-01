@@ -37,6 +37,9 @@
     border-bottom: 2px dashed var(--main-color);
     background: #fafafa;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #about h4 {
@@ -119,15 +122,16 @@
 /* project */
 #project {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     color: #333;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 #project #project-guide {
     width: 100vw;
     max-width: 480px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

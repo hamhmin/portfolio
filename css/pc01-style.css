@@ -1,7 +1,17 @@
 @import url('reset.css');
 @import url('svg.css');
 
-
+/* snap scroll */
+/* #container{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: auto;
+}
+#page-1,#page-2,#page-3,#page-4{
+    scroll-snap-align: center;
+    height: 100vh;
+} */
+/* snap scroll */
 .container {
     max-width: 1440px;
     width: 100vw;
