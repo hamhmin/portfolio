@@ -357,7 +357,7 @@ $(window).scroll(function(){
         setTimeout(function(){
             skillAnimation();
         },500);
-    });
+    }); 
 
         // 페이지 네비게이션 호버시 텍스트 등장
         $('.pg-pips ul li').mouseenter(function () {
