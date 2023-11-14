@@ -6,6 +6,7 @@ $(function () {
             resizeValue = Number(param[1]);
         }
     }
+    history.pushState(null,null,"/portfolio");
     // resizeValue = 1;
     // splash
     if(resizeValue == ""){
