@@ -631,3 +631,7 @@ color: var(--main-color);
         font-weight: 500;
         font-size: 10px;
       }
+      #page-1,
+#page-2,
+#page-3,
+#page-4{min-height: 900px;}
