@@ -1,18 +1,31 @@
 $(function () {
+    const searchParams = new URLSearchParams(location.search);
+    var resizeValue = "";
+    for(const param of searchParams){
+        if(param[0] == "resize"){
+            resizeValue = Number(param[1]);
+        }
+    }
+    // resizeValue = 1;
     // splash
-    $('.splash').hide();
-    $('.splash').show();
-    $('.pg-pips').hide();
-    setTimeout(function(){
-        $('.splash p,.pg-pips').fadeIn();
-    },1000);
-    setTimeout(function(){
-        $('.splash').fadeOut();
-    },3000);
+    if(resizeValue == ""){
+        $('.splash').hide();
+        $('.splash').show();
+        $('.pg-pips').hide();
+        setTimeout(function(){
+            $('.splash p,.pg-pips').fadeIn();
+        },1000);
+        setTimeout(function(){
+            $('.splash').fadeOut();
+        },3000);
+    } else if(resizeValue == 1) {
+        $('.splash').hide();
+        $(".main-text").css("animation-delay","1s");
+    }
+
 
     // splash 랜덤 인삿말 삽입
     let hi = Math.floor(Math.random() * 3);
-    console.log('인삿말 번호',hi);
     if (hi == 0) {
         $('.splash p').html('Welcome!');
     }
@@ -401,7 +414,8 @@ $(window).scroll(function(){
     setInterval(function(){
         $(window).resize(function(){
             let vw = window.innerWidth;
-            console.log(vw);
+            // console.log(vw);
+            history.pushState(null,null,"/portfolio?resize=1");
             if(vw >= 520 && vw <=550){
                 location.reload();
             }
