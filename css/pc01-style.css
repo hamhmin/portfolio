@@ -654,3 +654,7 @@ padding-bottom: 40px;
     font-size: 12px;
     font-weight: 500;
   }
+#page-1,
+#page-2,
+#page-3,
+#page-4{min-height: 900px;}
